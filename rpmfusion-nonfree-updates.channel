@@ -1,0 +1,17 @@
+[rpmfusion-nonfree-updates]
+name=RPM Fusion for Fedora $releasever - Nonfree - Updates
+baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/$releasever/$basearch/
+disabled=yes
+type=rpm-md
+
+[rpmfusion-nonfree-updates-debuginfo]
+name=RPM Fusion for Fedora $releasever - Nonfree - Updates Debug
+baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/$releasever/$basearch/debug/
+disabled=yes
+type=rpm-md
+
+[rpmfusion-nonfree-updates-source]
+name=rpmfusion-nonfree for Fedora $releasever - Source
+baseurl=http://download1.rpmfusion.org/nonfree/fedora/updates/$releasever/SRPMS/
+disabled=yes
+type=rpm-md
