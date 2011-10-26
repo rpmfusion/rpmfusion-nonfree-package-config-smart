@@ -9,7 +9,7 @@
 Summary:    RPM Fusion (nonfree) configuration files for the Smart package manager
 Name:       rpmfusion-nonfree-package-config-smart
 Version:    15
-Release:    1
+Release:    2
 License:    GPLv2+
 Group:      System Environment/Base
 URL:        http://rpmfusion.org/
@@ -41,7 +41,7 @@ mkdir -p $RPM_BUILD_ROOT%{_sysconfdir}/smart/channels
 for channel in %{SOURCE1} %{SOURCE2} %{SOURCE3} %{SOURCE4};do
   name=$(basename $channel)
   %{__install} -p -m0644 $channel $RPM_BUILD_ROOT%{_sysconfdir}/smart/channels/$name
-  sed -i 's/\$basearch/%{_target_cpu}/' $RPM_BUILD_ROOT%{_sysconfdir}/smart/channels/$name
+  sed -i 's/\$basearch/%{basearch}/' $RPM_BUILD_ROOT%{_sysconfdir}/smart/channels/$name
   sed -i 's/\$releasever/%{fedora}/' $RPM_BUILD_ROOT%{_sysconfdir}/smart/channels/$name
 done
 
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/smart/channels/*.channel
 
 %changelog
+* Wed Oct 26 2011 Nicolas Chauvet <kwizart@gmail.com> - 15-2
+- Fix basearch on i386 - rfbz#2000
+
 * Mon Oct 17 2011 Nicolas Chauvet <kwizart@gmail.com> - 15-1
 - Update for F-15
 
