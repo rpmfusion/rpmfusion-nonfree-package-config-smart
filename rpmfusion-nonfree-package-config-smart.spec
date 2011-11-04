@@ -9,7 +9,7 @@
 Summary:    RPM Fusion (nonfree) configuration files for the Smart package manager
 Name:       rpmfusion-nonfree-package-config-smart
 Version:    14
-Release:    2
+Release:    3
 License:    GPLv2+
 Group:      System Environment/Base
 URL:        http://rpmfusion.org/
@@ -20,7 +20,7 @@ Source3:    rpmfusion-nonfree-updates.channel
 Source4:    rpmfusion-nonfree-updates-testing.channel
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 Requires:   smart
-Requires:   rpmfusion-free-package-config-smart >= %{version}-%{release}
+Requires:   rpmfusion-free-package-config-smart >= %{version}
 Provides:   smart-config-rpmfusion-nonfree = %{version}-%{release}
 
 %description
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/smart/channels/*.channel
 
 %changelog
+* Fri Nov 04 2011 Nicolas Chauvet <kwizart@gmail.com> - 14-3
+- Fix version requirement for rpmfusion-free
+
 * Wed Oct 26 2011 Nicolas Chauvet <kwizart@gmail.com> - 14-2
 - Fix basearch on i386 - rfbz#2000
 
