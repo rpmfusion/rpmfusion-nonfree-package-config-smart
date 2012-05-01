@@ -9,7 +9,7 @@
 Summary:    RPM Fusion (nonfree) configuration files for the Smart package manager
 Name:       rpmfusion-nonfree-package-config-smart
 Version:    17
-Release:    1
+Release:    1.1
 License:    GPLv2+
 Group:      System Environment/Base
 URL:        http://rpmfusion.org/
