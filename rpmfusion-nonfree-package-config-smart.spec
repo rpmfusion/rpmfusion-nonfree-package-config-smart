@@ -8,8 +8,8 @@
 
 Summary:    RPM Fusion (nonfree) configuration files for the Smart package manager
 Name:       rpmfusion-nonfree-package-config-smart
-Version:    16
-Release:    4
+Version:    17
+Release:    1
 License:    GPLv2+
 Group:      System Environment/Base
 URL:        http://rpmfusion.org/
@@ -54,6 +54,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/smart/channels/*.channel
 
 %changelog
+* Tue May 01 2012 Nicolas Chauvet <kwizart@gmail.com> - 17-1
+- Update to 17
+
 * Thu Feb 09 2012 Nicolas Chauvet <kwizart@gmail.com> - 16-4
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_17_Mass_Rebuild
 
