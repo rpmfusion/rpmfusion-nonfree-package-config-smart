@@ -17,8 +17,8 @@
 %global repo nonfree
 
 Summary:    RPM Fusion (%{repo}) configuration files for the Smart package manager
-Name:       rpmfusion-%{repo}-package-config-smart
-Version:    18
+Name:       rpmfusion-free-package-config-smart
+Version:    19
 Release:    1
 License:    GPLv2+
 Group:      System Environment/Base
@@ -70,6 +70,9 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %{_sysconfdir}/smart/channels/*.channel
 
 %changelog
+* Thu Jun 27 2013 Nicolas Chauvet <kwizart@gmail.com> - 19-1
+- Update to F-19
+
 * Fri Sep 07 2012 Nicolas Chauvet <kwizart@gmail.com> - 18-1
 - Update for F-18
 
