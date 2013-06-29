@@ -17,7 +17,7 @@
 %global repo nonfree
 
 Summary:    RPM Fusion (%{repo}) configuration files for the Smart package manager
-Name:       rpmfusion-free-package-config-smart
+Name:       rpmfusion-nonfree-package-config-smart
 Version:    19
 Release:    1
 License:    GPLv2+
